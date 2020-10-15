@@ -1,19 +1,19 @@
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 declare namespace dayjs {
-  function dayjs(date?: dayjs.ConfigType): dayjs.Dayjs;
+  function dayjs(date?: ConfigType): Dayjs;
 
   function dayjs(
-    date?: dayjs.ConfigType,
-    format?: dayjs.OptionType,
+    date?: ConfigType,
+    format?: OptionType,
     strict?: boolean
-  ): dayjs.Dayjs;
+  ): Dayjs;
 
   function dayjs(
-    date?: dayjs.ConfigType,
-    format?: dayjs.OptionType,
+    date?: ConfigType,
+    format?: OptionType,
     locale?: string,
     strict?: boolean
-  ): dayjs.Dayjs;
+  ): Dayjs;
 
   export type ConfigType = string | number | Date | Dayjs;
 
@@ -129,19 +129,24 @@ declare namespace dayjs {
     d: typeof dayjs
   ) => void;
 
-  export function extend<T = unknown>(plugin: PluginFunc<T>, option?: T): Dayjs;
+  namespace dayjs {
+    export function extend<T = unknown>(
+      plugin: PluginFunc<T>,
+      option?: T
+    ): Dayjs;
 
-  export function locale(
-    preset?: string | ILocale,
-    object?: Partial<ILocale>,
-    isLocal?: boolean
-  ): string;
+    export function locale(
+      preset?: string | ILocale,
+      object?: Partial<ILocale>,
+      isLocal?: boolean
+    ): string;
 
-  export function isDayjs(d: unknown): d is Dayjs;
+    export function isDayjs(d: unknown): d is Dayjs;
 
-  export function unix(t: number): Dayjs;
+    export function unix(t: number): Dayjs;
 
-  const Ls: { [key: string]: ILocale };
+    const Ls: { [key: string]: ILocale };
+  }
 }
 
 declare module 'dayjs/locale/*' {
