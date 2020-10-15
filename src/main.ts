@@ -42,11 +42,15 @@ function main() {
   //Wed Jan 01 00:00:00 GMT+09:00 2020
 
   const d10 = dayjs.dayjs(new Date(2020, 0, 1));
-  Logger.log(d10.format('YYYY-MM-DD dddd'));
+  Logger.log(d10.locale('ja').format('YYYY-MM-DD dddd'));
+  //2020-01-01 水曜日
+
+  const d11 = dayjs.dayjs(new Date(2020, 0, 1));
+  Logger.log(d11.format('YYYY-MM-DD dddd'));
   //2020-01-01 Wednesday
 
   dayjs.dayjs.locale('ja');
-  const d11 = dayjs.dayjs(new Date(2020, 0, 1));
-  Logger.log(d11.format('YYYY-MM-DD dddd'));
+  const d12 = dayjs.dayjs(new Date(2020, 0, 1));
+  Logger.log(d12.format('YYYY-MM-DD dddd'));
   //2020-01-01 水曜日
 }
