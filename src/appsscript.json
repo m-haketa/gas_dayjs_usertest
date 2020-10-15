@@ -4,7 +4,7 @@
     "libraries": [{
       "userSymbol": "dayjs",
       "libraryId": "1MIINN8Zuc-Y7WZ7itcFPknTyZlGZcaZzAD7kTj6WrLQ9JjRlds9ncPo3",
-      "version": "2"
+      "version": "3"
     }]
   },
   "exceptionLogging": "STACKDRIVER",

@@ -40,4 +40,13 @@ function main() {
   const date9 = d9.toDate();
   Logger.log(date9);
   //Wed Jan 01 00:00:00 GMT+09:00 2020
+
+  const d10 = dayjs.dayjs(new Date(2020, 0, 1));
+  Logger.log(d10.format('YYYY-MM-DD dddd'));
+  //2020-01-01 Wednesday
+
+  dayjs.dayjs.locale('ja');
+  const d11 = dayjs.dayjs(new Date(2020, 0, 1));
+  Logger.log(d11.format('YYYY-MM-DD dddd'));
+  //2020-01-01 水曜日
 }
